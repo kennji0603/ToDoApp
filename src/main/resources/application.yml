@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/to_do_app_java?useUnicode=true&characterEncoding=UTF-8&connectionTimeZone=SERVER
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+spring.sql.init.mode: always
+spring.sql.init.encoding: UTF-8
+spring.jpa.show-sql: true
+spring.jpa.hibernate.ddl-auto: update
