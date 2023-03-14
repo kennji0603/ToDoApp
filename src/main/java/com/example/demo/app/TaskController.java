@@ -118,7 +118,7 @@ public class TaskController {
 		Task task = makeTask(taskForm, taskId);
 		if(!result.hasErrors()) {
 			taskService.update(task);
-			redirectAttributes.addFlashAttribute("complete","変更完了");
+			redirectAttributes.addFlashAttribute("complete","更新完了");
 			return "redirect:/" + taskId;
 		} else {
 			model.addAttribute("taskForm", taskForm);
