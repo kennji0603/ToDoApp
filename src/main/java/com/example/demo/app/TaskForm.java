@@ -22,7 +22,7 @@ public class TaskForm {
 	    @Size(min = 1, max = 20, message = "20文字以内で入力してください。")
 	    private String title;
 
-	    @NotNull (message = "内容を入力してください。")
+	    @NotNull (message = "詳細を入力してください。")
 	    private String detail;
 
 	    @NotNull (message = "期限を設定してください。")

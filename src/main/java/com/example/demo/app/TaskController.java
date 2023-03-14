@@ -86,7 +86,12 @@ public class TaskController {
 //		Taskを1件取得し、optionalでラップ
 		Optional<Task> taskOpt = taskService.getTask(id);
 //		TaskFormへの詰め直し処理
-		Optional<TaskForm> taskFormOpt = taskOpt.map(t -> makeTaskForm(t));
+		Optional<TaskForm> taskFormOpt;
+	    if (taskOpt.isPresent()) {
+	        taskFormOpt = Optional.of(makeTaskForm(taskOpt.get()));
+	    } else {
+	        taskFormOpt = Optional.empty();
+	    }
 		
 //		TaskFormがNullでなければ、中身を取り出す
 		if(taskFormOpt.isPresent()) {
