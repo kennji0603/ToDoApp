@@ -4,7 +4,3 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
     password:
-spring.sql.init.mode: always
-spring.sql.init.encoding: UTF-8
-spring.jpa.show-sql: true
-spring.jpa.hibernate.ddl-auto: update
