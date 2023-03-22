@@ -40,6 +40,7 @@ public class TaskController {
 		
 		model.addAttribute("list", list);
 		model.addAttribute("title", "タスク一覧");
+		model.addAttribute("formTitle", "タスク作成フォーム");
 		return "index";
 	}
 	
@@ -98,7 +99,7 @@ public class TaskController {
 		
 		model.addAttribute("taskForm", taskForm);
 		model.addAttribute("taskId", id);
-		model.addAttribute("title", "更新フォーム");
+		model.addAttribute("formTitle", "タスク詳細");
 		
 		return "index";
 		

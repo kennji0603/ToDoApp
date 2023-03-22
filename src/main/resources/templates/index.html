@@ -11,7 +11,8 @@
 	</header>
 	<div class="container">
 		<div class="form">
-			<h2>タスク作成フォーム</h2>
+			<h2 th:if="${taskForm.isnewTask}" th:text="${formTitle}">タスク作成フォーム</h2>
+			<h2 th:unless="${taskForm.isnewTask}" th:text="${formTitle}">タスク詳細</h2>
 			<p th:if="${complete}" th:text="${complete}"></p>
 			<form method="POST" th:action="${taskForm.isnewTask}? @{/insert} : @{/update}" th:object="${taskForm}">
 				<div class="form_type">
